@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    filter: contrast(1.2) brightness(1.1) saturate(50%) hue-rotate(90deg);
+    animation: flicker 0.5s infinite alternate;
+}
+
+@keyframes flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.85; }
+}
+
+/* Горизонтальная движущаяся полоса */
+@keyframes moving-line {
+    0% { top: -10%; }
+    100% { top: 110%; }
+}
+
+.moving-line {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: moving-line 0.1s infinite linear;
+    mix-blend-mode: difference;
+    pointer-events: none;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    filter: contrast(1.2) brightness(1.1) saturate(50%) hue-rotate(90deg);
+    animation: flicker 0.5s infinite alternate;
+}
+
+@keyframes flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.85; }
+}
+
+/* Горизонтальная движущаяся полоса */
+@keyframes moving-line {
+    0% { top: -10%; }
+    100% { top: 110%; }
+}
+
+.moving-line {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: moving-line 0.1s infinite linear;
+    mix-blend-mode: difference;
+    pointer-events: none;
+}
