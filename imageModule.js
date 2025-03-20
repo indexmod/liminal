@@ -1,4 +1,4 @@
-const repo = "indexmod/liminal"; // Укажи свой репозиторий
+const repo = "indexmod/limi"; // Укажи свой репозиторий
 const imgElement = document.getElementById("random-img");
 
 async function fetchRandomImage() {
