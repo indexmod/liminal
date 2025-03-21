@@ -4,7 +4,7 @@ let audioFiles = [];
 
 async function fetchAudioFiles() {
     try {
-        const response = await fetch(`https://api.github.com/repos/${repo}/contents/`);
+        const response = await fetch(`https://api.github.com/repos/${window.repo}/contents/`);
         const files = await response.json();
 
         // Фильтруем только аудиофайлы
@@ -24,7 +24,7 @@ function playNextAudio() {
     if (audioFiles.length === 0) return;
 
     audioElement.src = audioFiles[currentAudioIndex].download_url;
-    audioElement.play();
+    audioElement.play().catch(err => console.error("Ошибка воспроизведения:", err));
 
     currentAudioIndex = (currentAudioIndex + 1) % audioFiles.length;
 }
