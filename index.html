@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Image Viewer</title>
+    <title>Random Liminal</title>
     <meta name="description" content="This page displays a random image from a GitHub repository.">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -13,7 +13,24 @@
         <div class="moving-line"></div>
     </div>
 
+    <!-- Кнопка с вопросительным знаком -->
+    <div class="help-button" id="helpButton">
+        <svg width="50" height="50" viewBox="0 0 50 50">
+            <circle cx="25" cy="25" r="23" stroke="white" stroke-width="2" fill="none"/>
+            <text x="50%" y="50%" text-anchor="middle" dy=".3em" font-size="24" fill="white" opacity="0.6">?</text>
+        </svg>
+    </div>
+
+    <!-- Попап-меню -->
+    <div class="popup-menu" id="popupMenu">
+        <a href="#" class="popup-icon">🔗</a>
+        <a href="#" class="popup-icon">🎵</a>
+        <a href="#" class="popup-icon">📷</a>
+        <a href="#" class="popup-icon">⚙</a>
+    </div>
+
     <script src="imageModule.js"></script>
     <script src="soundModule.js"></script>
+    <script src="menuModule.js"></script>
 </body>
 </html>
