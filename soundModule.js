@@ -1,5 +1,5 @@
-const repo = "indexmod/liminal"; // Укажи свой репозиторий
-let currentIndex = 0;
+const audioElement = new Audio();
+let currentAudioIndex = 0;
 let audioFiles = [];
 
 async function fetchAudioFiles() {
@@ -23,12 +23,10 @@ async function fetchAudioFiles() {
 function playNextAudio() {
     if (audioFiles.length === 0) return;
 
-    const audio = new Audio(audioFiles[currentIndex].download_url);
-    audio.play();
+    audioElement.src = audioFiles[currentAudioIndex].download_url;
+    audioElement.play();
 
-    currentIndex = (currentIndex + 1) % audioFiles.length;
-
-    audio.onended = playNextAudio;
+    currentAudioIndex = (currentAudioIndex + 1) % audioFiles.length;
 }
 
 // Запуск при загрузке страницы и по событиям
