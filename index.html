@@ -24,11 +24,21 @@
 
     <!-- Попап-меню -->
     <div class="popup-menu" id="popupMenu">
-        <a href="#" class="popup-icon">🔗</a>
-        <a href="#" class="popup-icon">🎵</a>
-        <a href="#" class="popup-icon">📷</a>
-        <a href="#" class="popup-icon">⚙</a>
+        <a href="https://www.buymeacoffee.com/indexmod" class="popup-icon" target="_blank">☕</a>
+        <a href="#" class="popup-icon reload">🎵</a>
+        <a href="#" class="popup-icon reload">📷</a>
+        <a href="#" class="popup-icon reload">🔄</a>
     </div>
+
+    <script>
+        document.querySelectorAll('.popup-icon.reload').forEach(icon => {
+            icon.addEventListener('click', (event) => {
+                event.preventDefault();
+                location.reload();
+            });
+        });
+    </script>
+
 
     <script src="imageModule.js"></script>
     <script src="soundModule.js"></script>
