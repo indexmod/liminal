@@ -115,21 +115,23 @@ img {
     transform: translateY(0);
 }
 
-/* Стили иконок */
+/* Стили кружочков */
 .popup-icon {
     width: 50px;
     height: 50px;
-    background: rgba(255, 255, 255, 0.1);
+    background: white; /* Белый круг */
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
     font-size: 24px;
-    color: white;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: black; /* Черный текст */
     transition: background 0.3s;
 }
 
 .popup-icon:hover {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.7);
 }
