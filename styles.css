@@ -32,7 +32,7 @@ body, html {
     background-color: darkred;
     border-radius: 50%;
     z-index: 10;
-    animation: blink 1s infinite alternate;
+    animation: blink 5s infinite alternate;
 }
 
 @keyframes blink {
